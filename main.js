@@ -76,9 +76,11 @@ try {
     ])
 
     if (results.every((result) => result.state === "granted")) {
+      alert('Permissions granted!')
       sensor.start();
     } 
     else {
+      alert('Permissions error!')
       console.log("No permissions to use AbsoluteOrientationSensor.");
     }
 
