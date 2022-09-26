@@ -12,10 +12,6 @@ camera.position.z = 1;
 
 const scene = new THREE.Scene();
 
-const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
-const material = new THREE.MeshNormalMaterial();
-
-const mesh = new THREE.Mesh(geometry, material)
 
 let model
 // scene.add(mesh);
@@ -26,7 +22,7 @@ loader.load('arrow.fbx', (fbx) => {
 
   model = fbx
 
-  model.scale.setScalar(0.001)
+  model.scale.setScalar(0.0005)
   model.position.set(0, 0, 0)
   model.traverse(c => {
     //c.castShadow = true
