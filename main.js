@@ -62,8 +62,12 @@ try {
   });
 
 
+  const startButton = document.getElementById('startButton')
 
-  renderer.domElement.addEventListener('click', async () => {
+  startButton.addEventListener('click', async () => {
+
+    startButton.parentElement.style.display = 'none'
+
 
     const results = await Promise.all([
       navigator.permissions.query({ name: "accelerometer" }),
